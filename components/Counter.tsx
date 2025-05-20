@@ -7,7 +7,7 @@ export default function Counter() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{ border: "1px solid #0070f3", padding: "15px", margin: "20px 0", borderRadius: "8px", backgroundColor: "#e0f2ff" }}>
+    <div style={{ border: "1px solid #0070f3", padding: "15px", margin: "20px 0", borderRadius: "8px" }}>
       <p style={{ fontSize: "1.2em", fontWeight: "bold" }}>現在のカウント: {count}</p>
       <button
         onClick={() => setCount(count + 1)}
