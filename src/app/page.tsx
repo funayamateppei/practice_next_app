@@ -1,12 +1,22 @@
 // src/app/page.tsx
 import Link from "next/link"
+import { Greeting, Counter } from "../../components"
 
 export default function HomePage() {
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
       <h1>Next.js App Routerへようこそ！</h1>
       <p>これはルートページ (`/`) です。</p>
-      <nav style={{ marginTop: "20px" }}>
+
+      <h2>コンポーネントのデモ</h2>
+      {/* サーバーコンポーネントの利用 */}
+      <Greeting name="Next.js 学習者" />
+      <Greeting name="皆さん" message="頑張りましょう" />
+
+      {/* クライアントコンポーネントの利用 */}
+      <Counter />
+
+      <nav style={{ marginTop: "30px" }}>
         <ul style={{ listStyle: "none", padding: 0 }}>
           <li style={{ marginBottom: "10px" }}>
             <Link href="/about">Aboutページへ</Link>
