@@ -1,2 +1,2 @@
-export * from "./Greeting"
-export * from "./Counter"
+export { default as Greeting } from "./Greeting"
+export { default as Counter } from "./Counter"
