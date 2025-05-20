@@ -1,6 +1,6 @@
 // src/app/page.tsx
 import Link from "next/link"
-import { Greeting, Counter } from "../../components"
+import { ApiFetcher, Counter, Greeting } from "../../components"
 
 export default function HomePage() {
   return (
@@ -15,6 +15,9 @@ export default function HomePage() {
 
       {/* クライアントコンポーネントの利用 */}
       <Counter />
+
+      {/* APIからのメッセージを表示するコンポーネント */}
+      <ApiFetcher />
 
       <nav style={{ marginTop: "30px" }}>
         <ul style={{ listStyle: "none", padding: 0 }}>
