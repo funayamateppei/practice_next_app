@@ -7,9 +7,9 @@ interface GreetingProps {
   message?: string
 }
 
-const Greeting: React.FC<GreetingProps> = ({ name, message }) => {
+const Greeting: React.FC<GreetingProps> = ({name, message}) => {
   return (
-    <div style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0", borderRadius: "5px" }}>
+    <div style={{border: "1px solid #ccc", padding: "10px", margin: "10px 0", borderRadius: "5px"}}>
       <h2>
         {message ? message : "こんにちは"}, {name}さん！
       </h2>

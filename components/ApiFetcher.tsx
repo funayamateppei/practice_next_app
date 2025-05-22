@@ -1,7 +1,7 @@
 // components/ApiFetcher.tsx
 "use client" // このコンポーネントはクライアントサイドで動作します
 
-import React, { useState, useEffect } from "react"
+import React, {useState, useEffect} from "react"
 
 export default function ApiFetcher() {
   const [apiMessage, setApiMessage] = useState<string>("")
@@ -33,20 +33,31 @@ export default function ApiFetcher() {
 
   if (loading)
     return (
-      <p style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", backgroundColor: "#f9f9f9", borderRadius: "5px" }}>
+      <p
+        style={{marginTop: "20px", padding: "10px", border: "1px solid #ddd", backgroundColor: "#f9f9f9", borderRadius: "5px"}}
+      >
         APIメッセージを読み込み中...
       </p>
     )
   if (error)
     return (
-      <p style={{ marginTop: "20px", padding: "10px", border: "1px solid red", backgroundColor: "#ffecec", color: "red", borderRadius: "5px" }}>
+      <p
+        style={{
+          marginTop: "20px",
+          padding: "10px",
+          border: "1px solid red",
+          backgroundColor: "#ffecec",
+          color: "red",
+          borderRadius: "5px",
+        }}
+      >
         APIエラー: {error}
       </p>
     )
 
   return (
-    <p style={{ marginTop: "20px", padding: "10px", border: "1px solid #ddd", backgroundColor: "#f9f9f9", borderRadius: "5px" }}>
-      APIからのメッセージ: <strong style={{ color: "#333" }}>{apiMessage}</strong>
+    <p style={{marginTop: "20px", padding: "10px", border: "1px solid #ddd", backgroundColor: "#f9f9f9", borderRadius: "5px"}}>
+      APIからのメッセージ: <strong style={{color: "#333"}}>{apiMessage}</strong>
     </p>
   )
 }

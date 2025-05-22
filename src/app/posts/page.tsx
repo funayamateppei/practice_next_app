@@ -22,13 +22,13 @@ export default async function PostsPage() {
   const posts: Post[] = await res.json()
 
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
+    <div style={{padding: "20px", fontFamily: "sans-serif"}}>
       <h1>ブログ記事一覧 (SSG相当)</h1>
       <p>このページは**ビルド時**にデータがフェッチされ、静的なHTMLとして生成されます。</p>
       <p>リロードしても、基本的にはサーバー側でのデータフェッチは再実行されません。</p>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <ul style={{listStyle: "none", padding: 0}}>
         {posts.map((post) => (
-          <li key={post.id} style={{ marginBottom: "20px", border: "1px solid #ccc", padding: "10px", borderRadius: "5px" }}>
+          <li key={post.id} style={{marginBottom: "20px", border: "1px solid #ccc", padding: "10px", borderRadius: "5px"}}>
             <h2>{post.title}</h2>
             <p>{post.body.substring(0, 100)}...</p>
             {/* 動的ルーティングへのリンクは次で扱います */}
